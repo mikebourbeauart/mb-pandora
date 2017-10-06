@@ -9,7 +9,7 @@
 # Jeremy Ernst, Cesar Saez, and all other tutorial makers/educators online
 #
 ########################################################################################################################
- 
+from PySide import QtCore
 from PySide import QtCore, QtGui
 from shiboken import wrapInstance 
 import maya.OpenMayaUI as mui
@@ -18,13 +18,18 @@ import maya.cmds as mc
 import maya.mel as mel
 import inspect
 
+
 def get_parent():
 	ptr = mui.MQtUtil.mainWindow()
 	return wrapInstance( long( ptr ), QtGui.QWidget )   
 
 ########################################################################################################################
 class PandoraUI( QtGui.QSplashScreen ):
-	''' Create the text field that the user types into '''
+	'''Create the text field that the user types into
+
+	Pandora
+	====================
+	'''
 	def __init__( self, parent=get_parent() ):
 		super( PandoraUI, self ).__init__( parent )#parent ) # putting the parent argument in breaks the script
 		

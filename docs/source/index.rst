@@ -21,9 +21,7 @@ Guide
    :maxdepth: 3
    :caption: Contents:
    
-   license
-   help
-
+   modules
 
 
 Indices and tables
